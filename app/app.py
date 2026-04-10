@@ -22,7 +22,7 @@ def home():
     start = time.time()
     REQUEST_COUNT.labels(method='GET', endpoint='/').inc()
     REQUEST_LATENCY.labels(endpoint='/').observe(time.time() - start)
-    return jsonify({"message": "Hello, Flask with Prometheus! "})
+    return jsonify({"message": "Hello, Flask with Prometheus!"})
 
 @app.route('/metrics')
 def metrics():
