@@ -16,7 +16,7 @@ def client():
 def test_home_route(client):
     response = client.get('/')
     assert response.status_code == 200
-    assert response.json == {"message": "Hello, Flask with Prometheus!"}
+    assert response.json == {"message": "Hello, go goa code i make changement"}
 
 def test_metrics_route(client):
     response = client.get('/metrics')
